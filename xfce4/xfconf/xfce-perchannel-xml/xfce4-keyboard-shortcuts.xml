@@ -60,6 +60,8 @@
       <property name="&lt;Super&gt;minus" type="string" value="brave"/>
       <property name="&lt;Super&gt;equal" type="string" value="brave --incognito dnsleaktest.com"/>
       <property name="&lt;Super&gt;c" type="string" value="code"/>
+      <property name="&lt;Super&gt;s" type="string" value="/usr/bin/signal-desktop"/>
+      <property name="&lt;Super&gt;z" type="string" value="/usr/bin/zoom"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

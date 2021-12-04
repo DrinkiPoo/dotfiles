@@ -73,6 +73,8 @@ alias attach='tmux attach -t'
 alias tls='tmux list-sessions'
 alias tkill='tmux kill-session -t'
 alias tmuxrc='nvim ~/.config/dotfiles/.tmux.conf'
+alias tmux='tmux -2'
+alias tkillall='tmux kill-session -a'
 
 #Functions that can be called from the terminal
 
