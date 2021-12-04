@@ -13,8 +13,8 @@ noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
 " Change 2 split windows from vert to horiz or horiz to vert
-nnoremap <C-v> <C-w>t<C-w>H
-nnoremap <C-b> <C-w>t<C-w>K
+nnoremap <C-f> <C-w>t<C-w>H
+nnoremap <C-g> <C-w>t<C-w>K
 
 
 " Removes pipes | that act as seperators on splits

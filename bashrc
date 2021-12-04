@@ -118,3 +118,13 @@ vitals(){
 	d=`date +%x`
 	printf "$d\t$1\t$2\n" >> ~/.vitals
 }
+
+# Empty Clipboard(s)
+empty(){
+    if [ $# -eq 0 ]; then
+    xclip -i -selection clipboard /dev/null
+else
+    xclip -i -selection $1 /dev/null
+    fi
+
+}
