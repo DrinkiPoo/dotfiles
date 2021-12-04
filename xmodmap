@@ -1,4 +1,4 @@
-! softlink ~/.Xmodmap to this file to turn CAPSLOCK to contorl and Shift+CAPSLOCK
+! softlink ~/.Xmodmap to this file to turn CAPSLOCK to contorl and Shift+CAPSLOCK to CAPSLOCK
 !
 clear lock
 clear control
