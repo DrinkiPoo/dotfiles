@@ -1,13 +1,30 @@
-# Link this file to ~/.bashrc !!!
+#           ____       _     __     __  _____   _   ____   
+#          |  _ \     / \    \ \   / / | ____| ( ) / ___|  
+#          | | | |   / _ \    \ \ / /  |  _|   |/  \___ \  
+#          | |_| |  / ___ \    \ V /   | |___       ___) | 
+#          |____/  /_/   \_\    \_/    |_____|     |____/  
+#           ____       _      ____       _      ____    ____   
+#          | __ )     / \    |  _ \     / \    / ___|  / ___|  
+#          |  _ \    / _ \   | | | |   / _ \   \___ \  \___ \  
+#          | |_) |  / ___ \  | |_| |  / ___ \   ___) |  ___) | 
+#          |____/  /_/   \_\ |____/  /_/   \_\ |____/  |____/  
+#           ____       _      ____    _   _   ____     ____  
+#          | __ )     / \    / ___|  | | | | |  _ \   / ___| 
+#          |  _ \    / _ \   \___ \  | |_| | | |_) | | |     
+#          | |_) |  / ___ \   ___) | |  _  | |  _ <  | |___  
+#          |____/  /_/   \_\ |____/  |_| |_| |_| \_\  \____| 
 
+
+
+
+# Link this file to ~/.bashrc !!!
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 #export
-#yet they don't work. Help!!
-export EDITOR='/usr/bin/vim'
-export VISUAL='/usr/bin/vim'
+export EDITOR='/usr/bin/nvim'
+export VISUAL='/usr/bin/nvim'
 export PATH="/home/dave/bin:$PATH"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
@@ -24,6 +41,11 @@ export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 #PS1='\[$(tput setaf 9)\] \W$ \[$(tput setaf 39)\] \[$(tput bold)\]'
 PS1='\W$ '
 
+# Powerline 
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. /usr/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 
 #Aliases
 alias vim='nvim'
@@ -49,8 +71,6 @@ alias teamon='sudo systemctl start teamviewerd'
 alias teamoff='sudo systemctl stop teamviewerd'
 alias grep='grep --color'
 alias ip='ip -color=auto'
-alias vmusb='sudo systemctl start vmware-usbarbitrator.service'
-alias vmusboff='sudo systemctl stop vmware-usbarbitrator.service'
 alias ssh='kitty +kitten ssh' #for some reason kitty misbehaves when ssh-ing, the developer provided this shortcut but idk what's going on
 alias show='systemctl status'
 alias start='sudo systemctl start'
@@ -72,30 +92,13 @@ alias bright='redshift -P -O 6500'
 alias attach='tmux attach -t'
 alias tls='tmux list-sessions'
 alias tkill='tmux kill-session -t'
-alias tmuxrc='nvim ~/.config/dotfiles/.tmux.conf'
+alias tmuxrc='nvim ~/.config/dotfiles/tmux'
 alias tmux='tmux -2'
 alias tkillall='tmux kill-session -a'
 
 #Functions that can be called from the terminal
 
-#It's a FCC thing. Basically starts a new .js file with the words of the title connected with hypend. Also chmod +x
-
-valerie(){
-	args=("$@")
-	x=$1
-	ELEMENTS=${#args[@]}
-
-	for (( i=1;i<$ELEMENTS;i++)); do
-	    x="${x}-${args[${i}]}"
-	done
-	printf "/*\n\n*/\n\n\nconsole.log(\n\n);" > "$x.js"
-	chmod +x "$x.js"
-	vim "$x.js"
-}
-
-
 # Connect to a wifi
-
 connect(){
 	nmcli device wifi connect $1 password $2
 }
@@ -130,3 +133,4 @@ else
     fi
 
 }
+

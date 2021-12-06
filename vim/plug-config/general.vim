@@ -4,6 +4,8 @@ let mapleader='\'
 " Disable compatibility with old Vi to avoid unexpected results
 set nocompatible 
 
+" Only a signle line below the statusbar
+set cmdheight=1
 " Encoding 
 set encoding=UTF-8
 
@@ -46,6 +48,11 @@ filetype indent on  " Load an indent file for the detected file type
 set wildmenu
 set wildmode=longest,list,full
 
+
+ " set rtp+=/usr/lib/python3.9/site-packages/powerline/bindings/vim
+ " python3 from powerline.vim import setup as powerline_setup
+ " python3 powerline_setup()
+ " python3 del powerline_setup
 
 " First command maps (through linux/xmodmap) the caps lock key to the minus
 " key (which is my leader) when we enter vim. The second command reverts it
