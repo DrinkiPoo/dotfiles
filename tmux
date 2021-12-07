@@ -46,10 +46,17 @@ bind-key r source-file ~/.tmux.conf \; display-message "tmux config reloaded!"
 set -g default-terminal "screen-256color"
 
 # Styles
-set-option -g status-style bg="#1d3b53",fg=white
+set-option -g status-style bg="#1d3b53"
+
+# Left
 set-option -g status-left "#[fg=color235,bg="#a1cd5e"]Session:#{session_name} "
 set-option -g status-left-length 20
-set-option -g status-right "#[bg="#82aaff",fg=color235] #(date +'%Y/%m/%d | %I:%M%p') #[bg="#ecc48d",fg=color235] #(nmcli | head -1| awk '{print ($2==\"disconnected\") ? \"no wifi\" : $4}') #[bg="#ae81ff"] #(sudo tlp-stat|grep Charge|head -1|awk '{print $3}'|cut -d "." -f 1)% "
+
+# Right
+set-option -g status-right "#[bg="#82aaff",fg=color235] #(date +'%Y/%m/%d | %a | %I:%M%p') #[bg="#ecc48d",fg=color235] #(nmcli | head -1| awk '{print ($2==\"disconnected\") ? \"no wifi\" : $4}') #[bg="#ae81ff"] #(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '$1 ~/state/ {if($2 == \"discharging\"){print \"-\"} else {print \"+\"}}')#(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '$1 ~/percentage/ {print $2}') "
+set-option -g status-right-length 47
+
+# Window/Middle
 set-option -g window-status-format " #{window_index}:#{window_name}#{window_flags} " 
 set-option -g window-status-current-format "#[bg="#f9ca24",fg=color235] #{window_index}:#{window_name}#{window_flags} "
 
