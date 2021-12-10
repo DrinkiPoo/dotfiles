@@ -1,0 +1,79 @@
+# This file should be used to install packages in a new machine
+# This file should be updated everytime a package is installed or removed (write a script for that!!)
+# This file should contain all the packages you've installed yourself like cmatric or nodejs
+# and not base install or dependencies like gcc or pacman or libbutthole
+# Use this command to install files in a new machine: sudo pacman -S --needed $( egrep -v "#" ~/.config/dotfiles/install.these )
+# Uncomment optional packages as you like 
+# Also install the following packages from the AUR
+# 1. brave-bin
+# 2. google-chrome
+# 3. mongodb-bin
+# 4. mongodb-tools-bin
+# 5. nodejs-nodemon
+# 6. visual-studio-code-bin
+# 7. zoom 
+
+# aircrack-ng
+# aspell
+# aspell-en
+# attr
+
+bat
+bc
+blueman
+bluez
+bluez-libs
+brave-bin
+cmatrix
+cowsay
+eog
+exo
+figlet
+firefox
+fuse3
+gedit
+git
+gvfs
+gvfs-afc
+gvfs-mtp
+gzip
+htop
+imagemagick
+# java-environment-common
+# java-runtime-common
+# jdk-openjdk
+# jre-openjdk
+# jre-openjdk-headless
+kitty
+kitty-terminfo
+lm_sensors
+lsd
+lsof
+# lua
+# lynx
+macchanger
+mpv
+ncdu
+neovim
+# net-tools
+nodejs
+nodejs-nodemon
+npm
+# ntp
+openssh
+# openvpn
+# penguin-subtitle-player
+python
+redshift
+screenfetch
+signal-desktop
+sl
+tlp
+tmux
+# transmission-gtk
+tree
+unrar
+unzip
+upower
+xclip
+

@@ -35,9 +35,12 @@ bind -n S-Right next-window
 # Mouse mode
 setw -g mouse on
 
-# Set easier window split keys
-bind-key v split-window -h
-bind-key h split-window -v
+# Set easier window split keys/Open splits in the same dir
+bind-key v split-window -h -c '#{pane_current_path}'
+bind-key h split-window -v -c '#{pane_current_path}'
+
+# Open new window in the same dir
+bind c new-window -c"#{pane_current_path}"
 
 # Easy config reload
 bind-key r source-file ~/.tmux.conf \; display-message "tmux config reloaded!"
@@ -53,8 +56,8 @@ set-option -g status-left "#[fg=color235,bg="#a1cd5e"]Session:#{session_name} "
 set-option -g status-left-length 20
 
 # Right
-set-option -g status-right "#[bg="#82aaff",fg=color235] #(date +'%Y/%m/%d | %a | %I:%M%p') #[bg="#ecc48d",fg=color235] #(nmcli | head -1| awk '{print ($2==\"disconnected\") ? \"no wifi\" : $4}') #[bg="#ae81ff"] #(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '$1 ~/state/ {if($2 == \"discharging\"){print \"-\"} else {print \"+\"}}')#(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '$1 ~/percentage/ {print $2}') "
-set-option -g status-right-length 47
+set-option -g status-right "#[bg="#82aaff",fg=color235] #(date +'%Y/%m/%d | %a | %I:%M%p') #[bg="#ecc48d",fg=color235] #(nmcli | head -1| awk '{print ($2==\"disconnected\") ? \"no wifi\" : $4}') #[bg="#ae81ff"] #(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk ' /state/ { PERCENTAGE=($2==\"discharging\")? \"-\" : \"+\" } /percentage/ { print PERCENTAGE $2 }') "
+set-option -g status-right-length 50
 
 # Window/Middle
 set-option -g window-status-format " #{window_index}:#{window_name}#{window_flags} " 

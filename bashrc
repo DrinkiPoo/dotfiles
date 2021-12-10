@@ -48,6 +48,7 @@ PS1='\W$ '
 #. /usr/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 
 #Aliases
+alias ping='ping -c 5 1.1.1.1 && ping -c 5 8.8.8.8'
 alias vim='nvim'
 alias bashrc='nvim ~/.config/dotfiles/bashrc'
 alias vimrc='nvim ~/.config/dotfiles/vim/plug-config/'
@@ -95,6 +96,7 @@ alias tkill='tmux kill-session -t'
 alias tmuxrc='nvim ~/.config/dotfiles/tmux'
 alias tmux='tmux -2'
 alias tkillall='tmux kill-session -a'
+alias dotfiles='clear && cd ~/.config/dotfiles/ && ls'
 
 #Functions that can be called from the terminal
 
@@ -134,3 +136,31 @@ else
 
 }
 
+# Get SHA256 hash of a string repeatedly n number of times, where n in the lenght of the string 
+# for example:
+# hash apple => 749fa8370006c2e2ede52a420f8e0992ed345eb1a987c0125bd9cc6cb5f865e1
+# because:
+# sha256 of apple = 3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b  -
+# sha256 of 3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b = ef884a460da0e7731fdbf2a097e21cda370403545360a365ecc9e38b2c387ab6  -
+# sha256 of ef884a460da0e7731fdbf2a097e21cda370403545360a365ecc9e38b2c387ab6 = 9f640eef62fc92ef97301f817153e848e3c4e349a30fe8ad6d6dfcca563f6e1d  -
+# sha256 of 9f640eef62fc92ef97301f817153e848e3c4e349a30fe8ad6d6dfcca563f6e1d = da7086e0efc230bbfca608b4c6c2c1bcfb2242a52bff9e213c635e15f321a7c4  -
+# And finally:
+# sha256 of da7086e0efc230bbfca608b4c6c2c1bcfb2242a52bff9e213c635e15f321a7c4 = 749fa8370006c2e2ede52a420f8e0992ed345eb1a987c0125bd9cc6cb5f865e1  -
+
+hash(){
+    length=$(echo -n $1 | awk '{print length}')
+
+    sha(){
+        str=$1
+        num=$2
+        if [ "$num" -eq 0 ]; then
+            echo $str
+        else
+            str=$(echo -n $str | sha256sum | awk '{print $1}')
+            ((num=num-1))
+            sha $str $num
+        fi
+    }
+
+sha $1 $length
+}

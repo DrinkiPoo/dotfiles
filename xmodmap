@@ -4,3 +4,9 @@ clear lock
 clear control
 add control = Caps_Lock Control_L Control_R
 keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
+
+!keycode 64 = Mode_switch
+!keysym h = h H Left
+!keysym j = j J Down
+!keysym k = k K Up
+!keysym l = l L Right
