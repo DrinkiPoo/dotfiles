@@ -1,0 +1,8 @@
+brave-bin
+google-chrome
+mongodb-bin
+mongodb-tools-bin
+nodejs-nodemon
+ocs-url
+visual-studio-code-bin
+zoom
