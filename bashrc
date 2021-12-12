@@ -54,7 +54,7 @@ alias bashrc='nvim ~/.config/dotfiles/bashrc'
 alias vimrc='nvim ~/.config/dotfiles/vim/plug-config/'
 alias whoami='cowsay You are a hugeee butthole!!'
 alias edit='nvim -u ~/.config/dotfiles/vim/story.vim'
-alias gui='startxfce4'
+alias gui='startxfce4 && exit'
 alias up='cd ..'
 alias cat='bat'
 alias ls='lsd -lh --icon=never'
@@ -102,7 +102,11 @@ alias dotfiles='clear && cd ~/.config/dotfiles/ && ls'
 
 # Connect to a wifi
 connect(){
-	nmcli device wifi connect $1 password $2
+    if [ $# -eq 1 ]; then
+        nmcli con up $1
+    else
+        nmcli device wifi connect $1 password $2
+    fi
 }
 
 # Launch Blueman
