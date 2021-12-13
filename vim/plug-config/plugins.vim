@@ -3,7 +3,7 @@ Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'preservim/nerdtree' |
 Plug 'itchyny/lightline.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
