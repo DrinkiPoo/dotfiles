@@ -48,6 +48,7 @@ PS1='\W$ '
 #. /usr/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 
 #Aliases
+alias updatepkglist='pacman -Qqetn > ~/.config/dotfiles/pkglist.txt'
 alias ping='ping -c 5 1.1.1.1 && ping -c 5 8.8.8.8'
 alias vim='nvim'
 alias bashrc='nvim ~/.config/dotfiles/bashrc'
@@ -77,7 +78,7 @@ alias show='systemctl status'
 alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
 alias screen='screenfetch -p'
-alias phone='cat /home/dave/.personal/address.book | grep -i'
+alias phone='cat /home/dave/.personal/raw/address.book | grep -i'
 alias pgp='gpg'
 alias nani='nano'
 alias tac='cat'
