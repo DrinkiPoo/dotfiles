@@ -26,6 +26,8 @@ nnoremap <leader>9 :vert sb 9<CR>
 " Go to the next buffers
 nnoremap <A-p> :bn<CR>
 nnoremap <A-o> :bp<CR>
+inoremap <A-p> <ESC>:bn<CR>
+inoremap <A-o> <ESC>:bp<CR>
 
 " Tabs
 " I have decided to give buffers a try before succumbing to tabs

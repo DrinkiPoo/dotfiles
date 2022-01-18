@@ -9,7 +9,7 @@
     "html",
     "typescriptreact"
   ],
-  "coc.preferences.extensionUpdateCheck": "weekly",
+  "coc.preferences.extensionUpdateCheck": "never",
   "emmet.includeLanguages": {
     "html": "html",
     "css": "css",

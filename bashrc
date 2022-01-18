@@ -29,9 +29,9 @@ export PATH="/home/dave/bin:$PATH"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Android Studio bullshit
-export ANDROID_HOME="/opt/android"
-export PATH="$ANDROID_HOME/platform-tools:$PATH"
-export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
+# export ANDROID_HOME="/opt/android"
+# export PATH="$ANDROID_HOME/platform-tools:$PATH"
+# export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 
 #Prompt
 # The \[ & ]\ are just to cover the options. You can do without it, but it will mess up the terminal from time to time
@@ -48,6 +48,10 @@ PS1='\W$ '
 #. /usr/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 
 #Aliases
+alias react='cd ~/Dump/react-typescript-projects-2021'
+alias react1='cd ~/Documents/react-projects-setups'
+alias pacmansyu='sudo pacman -Syu --noconfirm && updatepkglist && reboot'
+alias rmd='rm -rf'
 alias updatepkglist='pacman -Qqetn > ~/.config/dotfiles/pkglist.txt'
 alias ping='ping -c 5 1.1.1.1 && ping -c 5 8.8.8.8'
 alias vim='nvim'
@@ -96,8 +100,9 @@ alias tls='tmux list-sessions'
 alias tkill='tmux kill-session -t'
 alias tmuxrc='nvim ~/.config/dotfiles/tmux'
 alias tmux='tmux -2'
-alias tkillall='tmux kill-session -a'
+alias tclear='tmux kill-session -a'
 alias dotfiles='clear && cd ~/.config/dotfiles/ && ls'
+alias ipa='ip address'
 
 #Functions that can be called from the terminal
 
@@ -169,3 +174,8 @@ hash(){
 
 sha $1 $length
 }
+
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION

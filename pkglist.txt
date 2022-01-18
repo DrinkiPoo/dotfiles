@@ -58,7 +58,6 @@ transmission-gtk
 tree
 unrar
 unzip
-xdg-user-dirs
 xf86-video-vesa
 xfce4-appfinder
 xfce4-power-manager
