@@ -19,17 +19,15 @@ figlet
 firefox
 flex
 gedit
-gimp
 grub
 htop
-jdk-openjdk
 jq
 kitty
 linux-headers
 linux-lts
 linux-lts-headers
 lsd
-lynx
+lua
 macchanger
 make
 mpv
@@ -42,7 +40,6 @@ onboard
 openvpn
 pacman-contrib
 patch
-penguin-subtitle-player
 perl-image-exiftool
 pkgconf
 pkgfile
