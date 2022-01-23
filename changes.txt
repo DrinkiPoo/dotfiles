@@ -1,0 +1,4 @@
+1. Disabled ipv6 by passing 'ipv6.disable=1' parameter to the kernel. 
+=> edit /etc/default/grub, add 'ipv6.disable=1' at the end of GRUB_CMDLINE_LINUX, save and exit
+=> register the new kernel to your bootloader with 'sudo grub-mkconfig -o /boot/grub/grub.cfg'
+=> reboot. 
