@@ -14,4 +14,5 @@ function! GitStatus()
 endfunction
 "set statusline+=%{GitStatus()}
 
-
+let g:AutoPairsShortcutToggle = '<A-[>'
+let g:AutoPairsMapCh = 0

@@ -48,6 +48,7 @@ inoremap <C-b> <Esc>GA
 inoremap zz <Esc>zz
 inoremap <leader>p "+p
 inoremap <C-q> <Esc> :reg<CR>
+inoremap <C-0> <Esc>0i
 
 " Visual Mode
 vnoremap qq  <Esc>

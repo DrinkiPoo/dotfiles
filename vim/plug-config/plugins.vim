@@ -9,6 +9,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jiangmiao/auto-pairs'
 Plug 'jparise/vim-graphql'
 call plug#end()
 

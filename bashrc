@@ -47,6 +47,9 @@ PS1='\W$ '
 #POWERLINE_BASH_SELECT=1
 #. /usr/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 
+# Temp Aliases
+alias addict='cd ~/Dump/addict/'
+
 #Aliases
 alias react='cd ~/Dump/react-typescript-projects-2021'
 alias react1='cd ~/Documents/react-projects-setups'
