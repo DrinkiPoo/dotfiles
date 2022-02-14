@@ -106,8 +106,13 @@ alias tmux='tmux -2'
 alias tclear='tmux kill-session -a'
 alias dotfiles='clear && cd ~/.config/dotfiles/ && ls'
 alias ipa='ip address'
-
+alias logout='xfce4-session-logout --logout'
 #Functions that can be called from the terminal
+
+# Calulate shit
+calc(){
+    bc <<< "scale=2; $1"
+}
 
 # Connect to a wifi
 connect(){

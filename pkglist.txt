@@ -12,7 +12,6 @@ bison
 blueman
 cmatrix
 cowsay
-dialog
 discord
 eog
 figlet
