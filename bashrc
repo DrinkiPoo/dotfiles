@@ -144,6 +144,15 @@ vitals(){
 	printf "$d\t$1\t$2\n" >> ~/.vitals
 }
 
+# Create node repl with desired functions pre defined
+node(){
+    if [ $# -eq 0 ]; then
+        /usr/bin/node ~/.config/dotfiles/noderc.js
+    else
+        /usr/bin/node $1
+    fi
+}
+
 # Empty Clipboard(s)
 empty(){
     if [ $# -eq 0 ]; then
