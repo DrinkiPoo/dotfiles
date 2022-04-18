@@ -57,7 +57,7 @@ set-option -g status-left-length 20
 
 # Right
 set-option -g status-right "#[bg="#82aaff",fg=color235] #(date +'%Y/%m/%d | %a | %I:%M%p') #[bg="#ecc48d",fg=color235] #(nmcli | head -1| awk '{print ($2==\"disconnected\") ? \"no wifi\" : $4}') #[bg="#ae81ff"] #(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk ' /state/ { PERCENTAGE=($2==\"discharging\")? \"-\" : \"+\" } /percentage/ { print PERCENTAGE $2 }') "
-set-option -g status-right-length 50
+set-option -g status-right-length 54
 
 # Window/Middle
 set-option -g window-status-format " #{window_index}:#{window_name}#{window_flags} " 

@@ -12,6 +12,7 @@ bison
 blueman
 cmatrix
 cowsay
+dialog
 discord
 eog
 figlet
@@ -22,13 +23,10 @@ grub
 htop
 jq
 kitty
-linux-headers
 linux-lts
-linux-lts-headers
 lsd
 lua
 macchanger
-make
 mpv
 nano
 ncdu
@@ -38,12 +36,12 @@ ntp
 onboard
 openvpn
 pacman-contrib
-patch
 perl-image-exiftool
 pkgconf
 pkgfile
 powertop
 redshift
+rsync
 screenfetch
 sddm
 signal-desktop
@@ -54,6 +52,7 @@ transmission-gtk
 tree
 unrar
 unzip
+virtualbox
 xf86-video-vesa
 xfce4-appfinder
 xfce4-power-manager

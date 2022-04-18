@@ -6,4 +6,9 @@ const repl = require('repl');
 
 Object.defineProperty(global, 'clear', {get: () => console.clear()})
 
-repl.start("> ")
+global.factorial = function (num) {
+    if (num === 0) return 1
+    return num * factorial(num - 1)
+}
+
+repl.start("~> ")

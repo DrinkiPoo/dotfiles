@@ -2,3 +2,8 @@
 => edit /etc/default/grub, add 'ipv6.disable=1' at the end of GRUB_CMDLINE_LINUX, save and exit
 => register the new kernel to your bootloader with 'sudo grub-mkconfig -o /boot/grub/grub.cfg'
 => reboot. 
+
+2. Reinstalled the system to disabling of ivp6 was reverted i guess.
+
+3. Installing Android Studio:
+    sudo pacman -S jre8-openjdk-headless jre8-openjdk jdk8-openjdk openjdk8-doc openjdk8-src

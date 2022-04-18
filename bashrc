@@ -29,9 +29,11 @@ export PATH="/home/dave/bin:$PATH"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Android Studio bullshit
-# export ANDROID_HOME="/opt/android"
-# export PATH="$ANDROID_HOME/platform-tools:$PATH"
-# export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 #Prompt
 # The \[ & ]\ are just to cover the options. You can do without it, but it will mess up the terminal from time to time
@@ -51,6 +53,7 @@ PS1='\W$ '
 alias addict='cd ~/Dump/addict/'
 
 #Aliases
+alias showdns='cat /etc/resolv.conf'
 alias react='cd ~/Dump/react-typescript-projects-2021'
 alias react1='cd ~/Documents/react-projects-setups'
 alias pacmansyu='sudo pacman -Syu --noconfirm && updatepkglist && reboot'
@@ -123,6 +126,17 @@ connect(){
     fi
 }
 
+# Disable ipv5
+disable6(){
+    sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+    sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+}
+
+# Enable ipv5
+enable6(){
+    sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0
+    sudo sysctl -w net.ipv6.conf.default.disable_ipv6=0
+}
 # Launch Blueman
 bluemanon(){
 	sudo systemctl start bluetooth.service
