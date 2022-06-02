@@ -35,6 +35,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Java Home
+export JAVA_HOME=$HOME/Downloads/jdk-11
+
 #Prompt
 # The \[ & ]\ are just to cover the options. You can do without it, but it will mess up the terminal from time to time
 # The $(tput bold) command at the beginning will make everything bold
@@ -51,6 +54,11 @@ PS1='\W$ '
 
 # Temp Aliases
 alias addict='cd ~/Dump/addict/'
+
+# React Native Commands
+alias rnstart='npx react-native start'
+alias rnandroid='npx react-native run-android'
+alias link='npx react-native link'
 
 #Aliases
 alias showdns='cat /etc/resolv.conf'

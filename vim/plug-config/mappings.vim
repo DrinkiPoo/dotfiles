@@ -50,6 +50,9 @@ inoremap <leader>p "+p
 inoremap <C-q> <Esc> :reg<CR>
 inoremap <C-0> <Esc>0i
 
+"Use <C-p> for trigger snippet expand.
+imap <C-i> <Plug>(coc-snippets-expand)
+
 " Visual Mode
 vnoremap qq  <Esc>
 vnoremap <C-c> "+y
