@@ -9,8 +9,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'jiangmiao/auto-pairs'
 Plug 'jparise/vim-graphql'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 
