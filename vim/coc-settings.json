@@ -1,5 +1,5 @@
 {
-  "pairs.enableCharacters":["(", "[","{","\\", "'", "`"],
+  "pairs.enableCharacters":["(", "[","{", "'", "`"],
     "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
