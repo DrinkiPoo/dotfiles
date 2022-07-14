@@ -16,9 +16,9 @@ keycode  80 = 8 asterisk 8 asterisk
 keycode  81 = 9 parenleft 9 parenleft
 keycode  90 = 0 parenright 0 parenright
 
-keycode 23 = Super_L NoSymbol Super_L
+keycode 49 = Super_L NoSymbol Super_L
 keycode  133 = grave asciitilde grave asciitilde
-keycode  49 = Tab ISO_Left_Tab Tab ISO_Left_Tab
+!keycode  49 = Tab ISO_Left_Tab Tab ISO_Left_Tab
 
 !keycode 64 = Mode_switch
 !keysym h = h H Left
