@@ -118,6 +118,7 @@ alias tclear='tmux kill-session -a'
 alias dotfiles='clear && cd ~/.config/dotfiles/ && ls'
 alias ipa='ip address'
 alias logout='xfce4-session-logout --logout'
+alias two='nmcli con up awisheklamshal_2.4'
 #Functions that can be called from the terminal
 
 # Calulate shit
