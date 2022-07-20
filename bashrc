@@ -119,6 +119,9 @@ alias dotfiles='clear && cd ~/.config/dotfiles/ && ls'
 alias ipa='ip address'
 alias logout='xfce4-session-logout --logout'
 alias two='nmcli con up awisheklamshal_2.4'
+alias xx='xmodmap ~/.Xmodmap'
+alias xxx='xmodmap ~/.kenken'
+alias rn='npx react-native'
 #Functions that can be called from the terminal
 
 # Calulate shit
@@ -213,6 +216,22 @@ hash(){
     }
 
 sha $1 $length
+}
+
+hush(){
+    sha(){
+        str=$1
+        num=$2
+        if [ "$num" -eq 0 ]; then
+            echo $str
+        else
+            str=$(echo -n $str | sha256sum | awk '{print $1}')
+            ((num=num-1))
+            sha $str $num
+        fi
+    }
+
+sha $1 $2
 }
 
 
