@@ -2,26 +2,28 @@
 !
 clear lock
 clear control
-add control = Caps_Lock Control_L Control_R
+clear mod4
 keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
+keycode 23 = Super_L Super_R
+add mod4 = Super_L Super_R
+add control = Control_L Control_R     
 
-keycode  87 = 1 exclam 1 exclam
-keycode  88 = 2 at 2 at
-keycode  89 = 3 numbersign 3 numbersign
-keycode  83 = 4 dollar 4 dollar
-keycode  84 = 5 percent 5 percent
-keycode  85 = 6 asciicircum 6 asciicircum
-keycode  79 = 7 ampersand 7 ampersand
-keycode  80 = 8 asterisk 8 asterisk
-keycode  81 = 9 parenleft 9 parenleft
-keycode  90 = 0 parenright 0 parenright
+keycode  24 = q Q exclam
+keycode  25 = w W at
+keycode  26 = e E numbersign
+keycode  27 = r R dollar
+keycode  28 = t T percent
+keycode  29 = y Y asciicircum
+keycode  30 = u U ampersand
+keycode  31 = i I asterisk
+keycode  32 = o O parenleft
+keycode  33 = p P parenright
 
-keycode 49 = Super_L NoSymbol Super_L
-keycode  133 = grave asciitilde grave asciitilde
-!keycode  49 = Tab ISO_Left_Tab Tab ISO_Left_Tab
+keycode 49 = Tab
+keycode 133 = grave asciitilde
 
-!keycode 64 = Mode_switch
-!keysym h = h H Left
-!keysym j = j J Down
-!keysym k = k K Up
-!keysym l = l L Right
+keycode 64 = Mode_switch
+keysym h = h H Left
+keysym j = j J Down
+keysym k = k K Up
+keysym l = l L Right
