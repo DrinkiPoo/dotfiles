@@ -48,6 +48,8 @@ perl-image-exiftool
 pkgconf
 pkgfile
 powertop
+python-pdftotext
+qrencode
 redshift
 rsync
 screenfetch

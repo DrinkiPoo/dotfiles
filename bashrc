@@ -25,7 +25,7 @@
 #export
 export EDITOR='/usr/bin/nvim'
 export VISUAL='/usr/bin/nvim'
-export PATH="/home/dave/bin:$PATH"
+export PATH="/home/dave/bin:/home/dave/.local/bin:$PATH"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Android Studio bullshit
@@ -35,9 +35,8 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# Java Home
-export JAVA_HOME=$HOME/Downloads/jdk-11
-
+#Java home
+export JAVA_HOME='usr/bin/java'
 #Prompt
 # The \[ & ]\ are just to cover the options. You can do without it, but it will mess up the terminal from time to time
 # The $(tput bold) command at the beginning will make everything bold
@@ -53,13 +52,15 @@ PS1='\W$ '
 #. /usr/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 
 # Temp Aliases
-alias addict='cd ~/Dump/addict/'
+alias addict='cd ~/addict/react-advanced-2020/'
 
 # React Native Commands
 alias rnstart='npx react-native start'
 alias rnandroid='npx react-native run-android'
 alias link='npx react-native link'
 
+# Intellij
+alias intel='/opt/intellij/bin/idea.sh "$1" > /dev/null 2>&1 &'
 #Aliases
 alias showdns='cat /etc/resolv.conf'
 alias react='cd ~/Dump/react-typescript-projects-2021'
@@ -70,7 +71,7 @@ alias updatepkglist='pacman -Qqetn > ~/.config/dotfiles/pkglist.txt'
 alias ping='ping -c 5 1.1.1.1 && ping -c 5 8.8.8.8'
 alias vim='nvim'
 alias bashrc='nvim ~/.config/dotfiles/bashrc'
-alias vimrc='nvim ~/.config/dotfiles/vim/plug-config/'
+alias vimrc='nvim /home/dave/.config/nvim/lua/user'
 alias whoami='cowsay You are a hugeee butthole!!'
 alias edit='nvim -u ~/.config/dotfiles/vim/story.vim'
 alias gui='startxfce4 && exit'
@@ -95,6 +96,7 @@ alias ssh='kitty +kitten ssh' #for some reason kitty misbehaves when ssh-ing, th
 alias show='systemctl status'
 alias start='sudo systemctl start'
 alias stop='sudo systemctl stop'
+alias restart='sudo systemctl restart'
 alias screen='screenfetch -p'
 alias phone='cat /home/dave/.personal/raw/address.book | grep -i'
 alias pgp='gpg'
@@ -103,6 +105,7 @@ alias tac='cat'
 alias battery='sudo tlp-stat | grep Charge | head -1'
 alias glog='git log --graph --oneline --all'
 alias wifishow='nmcli device wifi list'
+alias wifi='nmcli | head -1'
 alias py='python'
 alias pip='pip3'
 #alias mocha='./node_modules/mocha/bin/mocha'
@@ -116,17 +119,23 @@ alias tmuxrc='nvim ~/.config/dotfiles/tmux'
 alias tmux='tmux -2'
 alias tclear='tmux kill-session -a'
 alias dotfiles='clear && cd ~/.config/dotfiles/ && ls'
+alias vimm='vim -u ~/.config/nvim/backup_init.vim'
+alias luacon='clear && cd ~/.config/nvim/lua/user && ls'
 alias ipa='ip address'
 alias logout='xfce4-session-logout --logout'
 alias two='nmcli con up awisheklamshal_2.4'
 alias xx='xmodmap ~/.Xmodmap'
 alias xxx='xmodmap ~/.kenken'
 alias rn='npx react-native'
+alias unneeded='sudo pacman -Rns `pacman -Qdtq`'
+alias tube='ytfzf -tf'
+alias tsn='ts-node'
+alias alpha='printf "A|B|C|D|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|Y\nY|R|S|T|V|K|P|U|B|N|C|Q|G|I|D|F|L|M|H|A|J|O\n"'
 #Functions that can be called from the terminal
 
 # Calulate shit
 calc(){
-    bc <<< "scale=2; $1"
+    bc <<< "scale=10; $1"
 }
 
 # Connect to a wifi

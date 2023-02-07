@@ -49,19 +49,21 @@ bind-key r source-file ~/.tmux.conf \; display-message "tmux config reloaded!"
 set -g default-terminal "screen-256color"
 
 # Styles
-set-option -g status-style bg="#1d3b53"
+set-option -g status-style bg="#292c3b"
 
 # Left
-set-option -g status-left "#[fg=color235,bg="#a1cd5e"]Session:#{session_name} "
+#set-option -g status-left "#[fg=color235,bg="#a1cd5e"]Session:#{session_name} "
+set-option -g status-left "#[fg=color235,bg="#82aaff"] Session:#{session_name} #[bg="#292c3b",fg="#82aaff"] "
 set-option -g status-left-length 20
 
+    
 # Right
-set-option -g status-right "#[bg="#82aaff",fg=color235] #(date +'%Y/%m/%d | %a | %I:%M%p') #[bg="#ecc48d",fg=color235] #(nmcli | head -1| awk '{print ($2==\"disconnected\") ? \"no wifi\" : $4}') #[bg="#ae81ff"] #(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk ' /state/ { PERCENTAGE=($2==\"discharging\")? \"-\" : \"+\" } /percentage/ { print PERCENTAGE $2 }') "
+set-option -g status-right "#(date +'%a %b %d %I:%M%p ') #(nmcli | head -1| awk '{print ($2==\"disconnected\") ? \"no wifi\" : $4}')#[bg="#292c3b",fg="#82aaff"] #[fg=color235,bg="#82aaff"]#(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk ' /state/ { PERCENTAGE=($2==\"discharging\")? \"-\" : \"+\" } /percentage/ { print PERCENTAGE $2 }') "
 set-option -g status-right-length 54
 
 # Window/Middle
-set-option -g window-status-format " #{window_index}:#{window_name}#{window_flags} " 
-set-option -g window-status-current-format "#[bg="#f9ca24",fg=color235] #{window_index}:#{window_name}#{window_flags} "
+set-option -g window-status-format "#[fg="#f5aea2"]#{window_index}:#{window_name} #[fg="#11121b"]" 
+set-option -g window-status-current-format "#[fg="#29ea18"]#{window_index}:#{window_name} #[fg="#11121b"]"
 
 # set windows and panes 1 indexed and not zero indexed
 set -g base-index 1
